@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hc_camera_interface</name>
+  <version>0.0.0</version>
+  <description>The  package</description>
+  <maintainer email="yzhong@todo.todo">yzhong</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+
+  <export>
+  </export>
+</package>

@@ -1,0 +1,26 @@
+<!-- Launch file for hc_camera_interface node -->
+<launch>
+    <arg name="image_topic" default="/sensor_raw/camera" />
+    <arg name="show_image" default="0" />
+    
+    <arg name="camera_num" default="2" />
+    <arg name="camera_ip" default="192.168.1.64;10.14.2.201" />
+    <arg name="camera_username" default="admin;admin" />
+    <arg name="camera_password" default="root1234;root1234" />
+    <arg name="camera_port" default="8000;8000" />
+    <!-- <arg name="camera_num" default="1" />
+    <arg name="camera_ip" default="10.14.2.201" />
+    <arg name="camera_username" default="admin" />
+    <arg name="camera_password" default="root1234" />
+    <arg name="camera_port" default="8000" /> -->
+    <node pkg="hc_camera_interface"  type="hc_camera_interface" name="hc_camera_interface" output="screen"  >
+        <param name="image_topic" value="$(arg image_topic)" />  
+        <param name="camera_num" value="$(arg camera_num)" />
+        <param name="camera_ip" value="$(arg camera_ip)" />
+        <param name="camera_username" value="$(arg camera_username)" />
+        <param name="camera_password" value="$(arg camera_password)" />
+        <param name="camera_port" value="$(arg camera_port)" /> 
+        <param name="show_image" value="$(arg show_image)" /> 
+    </node>  
+    
+</launch>
